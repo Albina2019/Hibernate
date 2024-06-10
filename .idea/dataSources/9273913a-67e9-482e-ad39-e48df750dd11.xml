@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>763</IntrospectionStateNumber>
+      <IntrospectionStateNumber>920</IntrospectionStateNumber>
       <ServerVersion>14.4</ServerVersion>
       <StartupTime>1717627355</StartupTime>
       <TimeZones>true ACDT
@@ -805,7 +805,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>763</IntrospectionStateNumber>
+      <IntrospectionStateNumber>920</IntrospectionStateNumber>
       <ObjectId>13754</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4244,11 +4244,68 @@ false Zulu
     <schema id="263" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>763</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-06-06.20:23:27</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>920</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-06-10.19:15:11</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
+    <sequence id="264" parent="263" name="users_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>19219</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>918</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="265" parent="263" name="users">
+      <ObjectId>19220</ObjectId>
+      <StateNumber>918</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="266" parent="265" name="id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>916</StateNumber>
+      <SequenceId>19219</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="267" parent="265" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>916</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="268" parent="265" name="last_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>916</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="269" parent="265" name="age">
+      <DasType>integer|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>916</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="270" parent="265" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19226</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>918</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="271" parent="265" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19227</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>916</StateNumber>
+      <UnderlyingIndexId>19226</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
