@@ -1,0 +1,6 @@
+url=
+userName=
+password=
+//Hibernet
+hibernate.show_sql=true
+hibernate.format_sql=true
